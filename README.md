@@ -13,7 +13,7 @@ We need:
 * ical / calendar entries
 * RSS / ATOM Feeds
 * New design (of course)
-* Site for Golfing, Callenges, etc etc.
+* Site for special events: { Golfing, Challenges, Trips to CCC, LUGS } -> Blog
 * Source code highlighting
 * The talk-pages should be able to have the slides, which shouldn't be in the
   git repository. How to do this properly?
