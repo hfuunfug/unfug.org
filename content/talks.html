@@ -1,0 +1,19 @@
+---
+title: Talks
+kind: :page
+---
+
+<%
+
+    relevant = @items.select do |item|
+      item.attributes[:kind] == :talk
+    end
+
+%>
+
+<% relevant.each do |item| %>
+    <div>
+        <%= link_to item.attributes[:title], item.identifier %>
+    </div>
+<% end %>
+
