@@ -4,7 +4,7 @@ title: Home
 
 No content here yet.
 
-<% (only_blogs(@items) + only_talks(@items)).each do |item| %>
+<% (only_blogs(@items) + past_and_next_talks(@items)).each do |item| %>
     <% if is_talk? item %>
         <div class="frontpage_item frontpage_talk">
     <% else %>
