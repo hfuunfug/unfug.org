@@ -7,7 +7,7 @@ This repository contains the unfug.org page sources.
 We need:
 
 * [x] History of talks already done
-* [ ] Schedule
+* [x] Schedule
 * [ ] Entries for each talk, including references, etc.
 * [x] About
 * [x] ical / calendar entries
