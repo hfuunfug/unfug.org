@@ -13,6 +13,10 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  generate_ical_items({ :unfug_starttime => 19, :unfug_endtime   => 20 })
+end
+
 #
 # This route matches all entries below /talks which have the following schema:
 #
@@ -60,15 +64,23 @@ compile %r</profiles/\S*/*> do
   layout 'default'
 end
 
+compile '/ical/*' do
+  # Nothing
+end
+
 compile '*' do
   if item[:extension] == 'css'
-    # don’t filter stylesheets
+    # don’t filter stylesheets or icalendar files
   elsif item.binary?
     # don’t filter binary items
   else
     filter :erb
     layout 'default'
   end
+end
+
+route '/ical/*' do
+  item.identifier.chop
 end
 
 route '*' do
@@ -84,4 +96,5 @@ route '*' do
   end
 end
 
+layout '/ical/', nil
 layout '*', :erb
