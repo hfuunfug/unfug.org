@@ -1,1 +1,8 @@
-<%= atom_feed(articles: only_talks(@items), limit: 15, author_name: "", author_uri: "") %>
+<%=
+    itms = only_talks(@items)
+    if itms.empty?
+        ""
+    else
+        atom_feed(articles: itms, limit: 15, author_name: "", author_uri: "")
+    end
+%>
