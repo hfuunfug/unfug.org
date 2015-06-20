@@ -18,17 +18,21 @@ No content here yet.
         </h2>
 
 
-        <div class="frontpage_item_author">
-            <% if is_talk? item %>
-                Speaker(s): <%= item.attributes[:speakers].join(", ") %>
-            <% else %>
-                Author: <%= item.attributes[:author] %>
-            <% end %>
-        </div>
+        <% if item.attributes[:speakers] or item.attributes[:author] %>
+            <div class="frontpage_item_author">
+                <% if is_talk? item %>
+                    Speaker(s): <%= item.attributes[:speakers].join(", ") %>
+                <% else %>
+                    Author: <%= item.attributes[:author] %>
+                <% end %>
+            </div>
+        <% end %>
 
-        <div class="frontpage_item_desc">
-            <%= item.attributes[:description] %>
-        </div>
+        <% if item.attributes[:description] %>
+            <div class="frontpage_item_desc">
+                <%= item.attributes[:description] %>
+            </div>
+        <% end %>
 
         <div class="frontpage_item_tag_box">
             Tags: <%= tags_for(item, separator: ", ") %>
