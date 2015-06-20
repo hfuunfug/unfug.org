@@ -22,6 +22,7 @@
 # allow executeable code (erb) in the posts.
 #
 compile %r</talks/\d{4}-\d{2}-\d{2}\-\S*/*> do
+  raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown" if item[:extension] != 'md'
   layout 'talk'
   layout 'default'
@@ -40,6 +41,7 @@ end
 # a monthly level.
 #
 compile %r</blog/\d{4}/\S*/article/*> do
+  raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown" if item[:extension] != 'md'
   layout 'blogarticle'
   layout 'default'
