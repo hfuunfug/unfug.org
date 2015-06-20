@@ -4,7 +4,7 @@ kind: :page
 ---
 
 <%
-    @items.map { |i| i.attributes[:tags] || [] }.flatten.uniq.sort.each do |tag|
+    all_tags(@items).each do |tag|
 %>
     <div>
         <%= link_for_tag tag, "/tag/" %>
