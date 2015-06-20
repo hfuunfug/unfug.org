@@ -13,6 +13,53 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+#
+# This route matches all entries below /talks which have the following schema:
+#
+# <4 digit year>-<2 digit month>-<2 digit month>-<no-whitespace-char-title>.md
+#
+# Note that only .md files (markdown) will be parsed. We do explicitely not
+# allow executeable code (erb) in the posts.
+#
+compile %r</talks/\d{4}-\d{2}-\d{2}\-\S*/*> do
+  raise "Item shouldn't be binary" if item.binary?
+  raise "Item is not Markdown" if item[:extension] != 'md'
+  layout 'talk'
+  layout 'default'
+end
+
+#
+# The blog is structured into
+#
+#   <4 digit year>/<title>/article.md
+#
+# The purpose of the additional hierarchy <title> is because we can also place
+# additional content in this directory, right next to the article file.
+#
+# The year folder level is for keeping the directory clean. There won't be more
+# than 3-4 blog posts per year, I guess (or better: hope), so we don't need
+# a monthly level.
+#
+compile %r</blog/\d{4}/\S*/article/*> do
+  raise "Item shouldn't be binary" if item.binary?
+  raise "Item is not Markdown" if item[:extension] != 'md'
+  layout 'blogarticle'
+  layout 'default'
+end
+
+#
+# This compile rule is for the member profiles. Each member is allowed to add
+# her or his own profile.
+#
+#   <name of the member>.md
+#
+compile %r</profiles/\S*/*> do
+  raise "Item is not Markdown" if item[:extension] != 'md'
+  raise "Item shouldn't be binary" if item.binary?
+  layout 'member'
+  layout 'default'
+end
+
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets

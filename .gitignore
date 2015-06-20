@@ -1,2 +1,5 @@
 output
 tmp
+crash.log
+vendor
+.bundle

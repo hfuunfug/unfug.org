@@ -1,0 +1,11 @@
+---
+title: Talks
+kind: :page
+---
+
+<% past_and_next_talks(@items).each do |item| %>
+    <div>
+        <%= link_to item.attributes[:title], item.identifier %>
+    </div>
+<% end %>
+

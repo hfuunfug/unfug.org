@@ -1,0 +1,11 @@
+---
+title: Blog
+kind: :page
+---
+
+<% only_blogs(@items).each do |item| %>
+    <div>
+        <%= link_to item.attributes[:title], item.identifier %>
+    </div>
+<% end %>
+
