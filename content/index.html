@@ -3,3 +3,42 @@ title: Home
 ---
 
 No content here yet.
+
+<%
+
+    relevant = @items.select do |item|
+      [:talk, :blog].include? item.attributes[:kind]
+    end
+
+%>
+
+<% relevant.each do |item| %>
+    <% if item.identifier.start_with? "/talks" %>
+        <div class="frontpage_item frontpage_talk">
+    <% else %>
+        <div class="frontpage_item frontpage_blog">
+    <% end %>
+        <%= link_to item.attributes[:title], item.identifier %>
+
+        <div class="frontpage_item_date">
+            <%= item.attributes[:date] %>
+        </div>
+
+        <div class="frontpage_item_author">
+            <% if item.identifier.start_with? "/talks" %>
+                Speaker(s): <%= item.attributes[:speakers].join(", ") %>
+            <% else %>
+                Author: <%= item.attributes[:author] %>
+            <% end %>
+        </div>
+
+        <div class="frontpage_item_desc">
+            <%= item.attributes[:description] %>
+        </div>
+
+        <div class="frontpage_item_tag_box">
+            Tags: <%= tags_for(item, separator: ", ") %>
+        </div>
+    </div>
+<% end %>
+
