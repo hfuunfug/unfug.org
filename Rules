@@ -27,6 +27,22 @@ compile %r</talks/\d{4}-\d{2}-\d{2}\-\S*/*> do
   layout 'default'
 end
 
+#
+# The blog is structured into
+#
+#   <4 digit year>/<title>/article.md
+#
+# The purpose of the additional hierarchy <title> is because we can also place
+# additional content in this directory, right next to the article file.
+#
+# The year folder level is for keeping the directory clean. There won't be more
+# than 3-4 blog posts per year, I guess (or better: hope), so we don't need
+# a monthly level.
+#
+compile %r</blog/\d{4}/\S*/article/*> do
+  raise "Item is not Markdown" if item[:extension] != 'md'
+  layout 'blogarticle'
+  layout 'default'
 end
 
 compile '*' do
