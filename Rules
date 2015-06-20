@@ -15,6 +15,7 @@
 
 preprocess do
   generate_ical_items({ :unfug_starttime => 19, :unfug_endtime   => 20 })
+  generate_tag_pages
 end
 
 #
@@ -66,6 +67,17 @@ end
 
 compile '/ical/*' do
   # Nothing
+end
+
+compile '/tags/' do
+  filter :erb
+  layout 'default'
+end
+
+compile '/tags/*' do
+  filter :erb
+  layout 'tagpage'
+  layout 'default'
 end
 
 compile '*' do

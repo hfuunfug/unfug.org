@@ -1,0 +1,13 @@
+---
+title: Tags
+kind: :page
+---
+
+<%
+    all_tags(@items).each do |tag|
+%>
+    <div>
+        <%= link_for_tag tag, "/tags/" %>
+    </div>
+<% end %>
+
