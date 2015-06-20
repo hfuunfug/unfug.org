@@ -80,6 +80,10 @@ compile '/tags/*' do
   layout 'default'
 end
 
+compile '/sitemap/' do
+  filter :erb
+end
+
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
