@@ -91,6 +91,9 @@ end
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
+  elsif item[:extension] == 'md'
+    filter :kramdown
+    layout 'default'
   elsif item.binary?
     # don’t filter binary items
   else
