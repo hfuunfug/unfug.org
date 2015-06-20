@@ -5,6 +5,7 @@ def generate_ical_items
   only_talks(@items).each do |item|
     event = Icalendar::Event.new
     event.dtstart = item[:date]
+    event.dtend   = item[:date]
     event.summary = "Unfug"
     event.description = item[:speakers].join(", ") + " - " + item[:title]
     ical.add_event event
