@@ -10,11 +10,13 @@ No content here yet.
     <% else %>
         <div class="frontpage_item frontpage_blog">
     <% end %>
-        <%= link_to item.attributes[:title], item.identifier %>
+        <h2>
+            <%= link_to item.attributes[:title], item.identifier %>
+            <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
+                <%= item.attributes[:date] %>
+            </time>
+        </h2>
 
-        <div class="frontpage_item_date">
-            <%= item.attributes[:date] %>
-        </div>
 
         <div class="frontpage_item_author">
             <% if is_talk? item %>

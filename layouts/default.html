@@ -1,23 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title><%= @item[:title] %></title>
-    <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+    <head>
+        <meta charset="utf-8">
+        <title><%= @item[:title] %></title>
+        <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-    <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
-  </head>
-  <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-        <%= link_to "Home", '/' %>
-        <%= link_to "Talks", '/talks/' %>
-        <%= link_to "Historie", '/history' %>
-        <%= link_to "Blog", '/blog/' %>
-        <%= link_to "Members", '/members/' %>
-    </div>
-  </body>
+        <!-- you don't need to keep this, but it's cool for stats! -->
+        <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+    </head>
+    <body>
+        <div id="sidebar">
+            <ul>
+                <li><%= link_to "Home", '/' %></li>
+                <li><%= link_to "Talks", '/talks/' %></li>
+                <li><%= link_to "Historie", '/history' %></li>
+                <li><%= link_to "Blog", '/blog/' %></li>
+                <li><%= link_to "Members", '/members/' %></li>
+            </ul>
+        </div>
+        <div id="main">
+            <%= yield %>
+        </div>
+        <div id="topbar">
+            Unfug.org
+        </div>
+    </body>
 </html>
