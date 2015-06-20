@@ -9,9 +9,15 @@ text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'h
 output_dir: output
 
 #
-# Base URL of the website, so the XMLSiteMap generator works.
+# Base URL of the website, so the XMLSiteMap generator works
+# and for blogging functionality: atom feed
 #
 base_url: "http://unfug.org"
+
+#
+# title of the page for blogging functionality: atom feed
+#
+title: "Unfug - Unix Friends and User Group Furtwangen"
 
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
