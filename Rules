@@ -84,6 +84,10 @@ compile '/sitemap/' do
   filter :erb
 end
 
+compile '/atom/*' do
+  filter :erb
+end
+
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
