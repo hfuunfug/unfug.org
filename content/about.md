@@ -10,10 +10,10 @@ hieß das Ganze eine Weile: "Unix für Interessierte".
 Da wir aber auch eine Linux User Group mit nettem Namen haben wollten, haben wir
 diese Veranstaltung nun Unix Friends and User Group - kurz UnFUG genannt.
 
-Ziel dieser Veranstaltung ist es, sich über Unix, Internet und all die
+Ziel dieser Veranstaltung war es, sich über Unix, Internet und all die
 interessanten Sachen zu unterhalten, die damit zusammenhängen. Mögliche
-Themengebiete reichen von der Systemadministration über Scriptsprachen wie awk
-und sed, das Aufsetzen und Warten von Serverdiensten wie HTTP (WWW) und FTP,
+Themengebiete beinhalteten Systemadministration über Scriptsprachen wie
+awk und sed, das Aufsetzen und Warten von Serverdiensten wie HTTP (WWW) und FTP,
 die Installation von Linux und anderen Betriebssystemen bis hin zu
 lebenswichtigen Sachen wie TeX und ähnlichem...
 
