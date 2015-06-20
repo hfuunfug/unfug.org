@@ -45,6 +45,19 @@ compile %r</blog/\d{4}/\S*/article/*> do
   layout 'default'
 end
 
+#
+# This compile rule is for the member profiles. Each member is allowed to add
+# her or his own profile.
+#
+#   <name of the member>.md
+#
+compile %r</profiles/\S*/*> do
+  raise "Item is not Markdown" if item[:extension] != 'md'
+  raise "Item shouldn't be binary" if item.binary?
+  layout 'member'
+  layout 'default'
+end
+
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets
