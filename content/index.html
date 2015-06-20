@@ -4,16 +4,8 @@ title: Home
 
 No content here yet.
 
-<%
-
-    relevant = @items.select do |item|
-      [:talk, :blog].include? item.attributes[:kind]
-    end
-
-%>
-
-<% relevant.each do |item| %>
-    <% if item.identifier.start_with? "/talks" %>
+<% (only_blogs(@items) + only_talks(@items)).each do |item| %>
+    <% if is_talk? item %>
         <div class="frontpage_item frontpage_talk">
     <% else %>
         <div class="frontpage_item frontpage_blog">
@@ -25,7 +17,7 @@ No content here yet.
         </div>
 
         <div class="frontpage_item_author">
-            <% if item.identifier.start_with? "/talks" %>
+            <% if is_talk? item %>
                 Speaker(s): <%= item.attributes[:speakers].join(", ") %>
             <% else %>
                 Author: <%= item.attributes[:author] %>

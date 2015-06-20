@@ -3,15 +3,7 @@ title: Members
 kind: :page
 ---
 
-<%
-
-    relevant = @items.select do |item|
-      item.attributes[:kind] == :member
-    end
-
-%>
-
-<% relevant.each do |item| %>
+<% only_members(@items).each do |item| %>
     <div>
         <%= link_to item.attributes[:name], item.identifier %>
     </div>
