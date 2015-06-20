@@ -1,0 +1,22 @@
+<p>
+    Everything with tag: <%= @item[:tag] %>
+</p>
+<%
+    @items.select do |i|
+         i.attributes[:tags] &&
+         i.attributes[:tags].include?(@item[:tag])
+    end.each do |item|
+        title = if is_talk? item
+            "Talk: " + item.attributes[:title]
+        elsif is_blog? item
+            "Blog: " + item.attributes[:title]
+        elsif is_member? item
+            "Member: " + item.attributes[:name]
+        end
+
+%>
+        <p>
+            <%= link_to title, item.identifier %>
+        </p>
+<% end %>
+
