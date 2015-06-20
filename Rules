@@ -14,7 +14,7 @@
 #   because “*” matches zero or more characters.
 
 preprocess do
-  generate_ical_items
+  generate_ical_items({ :unfug_starttime => 19, :unfug_endtime   => 20 })
 end
 
 #
