@@ -1,0 +1,19 @@
+---
+title: Blog
+kind: :page
+---
+
+<%
+
+    relevant = @items.select do |item|
+      item.attributes[:kind] == :blog
+    end
+
+%>
+
+<% relevant.each do |item| %>
+    <div>
+        <%= link_to item.attributes[:title], item.identifier %>
+    </div>
+<% end %>
+
