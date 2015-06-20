@@ -8,6 +8,11 @@ text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'h
 # relative to the site directory.
 output_dir: output
 
+#
+# Base URL of the website, so the XMLSiteMap generator works.
+#
+base_url: "http://unfug.org"
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.html”, but depending on the web server, this may be something else,

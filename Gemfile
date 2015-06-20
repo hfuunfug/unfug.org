@@ -6,3 +6,4 @@ gem "nanoc"
 gem "adsf"
 gem 'icalendar'
 gem 'guard-nanoc'
+gem 'builder'
