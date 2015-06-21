@@ -9,7 +9,7 @@ We need:
 * [x] History of talks already done
 * [ ] Schedule
 * [ ] Entries for each talk, including references, etc.
-* [ ] About
+* [x] About
 * [x] ical / calendar entries
 * [x] RSS / ATOM Feeds
 * [ ] New design (of course)

@@ -7,3 +7,4 @@ gem "adsf"
 gem 'icalendar'
 gem 'guard-nanoc'
 gem 'builder'
+gem 'kramdown'

@@ -29,6 +29,7 @@ end
 compile %r</talks/\d{4}-\d{2}-\d{2}\-\S*/*> do
   raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown" if item[:extension] != 'md'
+  filter :kramdown
   layout 'talk'
   layout 'default'
 end
@@ -48,6 +49,7 @@ end
 compile %r</blog/\d{4}/\S*/article/*> do
   raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown" if item[:extension] != 'md'
+  filter :kramdown
   layout 'blogarticle'
   layout 'default'
 end
@@ -61,6 +63,7 @@ end
 compile %r</profiles/\S*/*> do
   raise "Item is not Markdown" if item[:extension] != 'md'
   raise "Item shouldn't be binary" if item.binary?
+  filter :kramdown
   layout 'member'
   layout 'default'
 end
@@ -91,6 +94,9 @@ end
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
+  elsif item[:extension] == 'md'
+    filter :kramdown
+    layout 'default'
   elsif item.binary?
     # don’t filter binary items
   else
