@@ -14,7 +14,7 @@ kind: :page
 <% end %>
 
 <p>History:</p>
-<% past_and_next_talks(@items).each do |item| %>
+<% past_talks(@items).each do |item| %>
     <div class="link">
         <%
          linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
