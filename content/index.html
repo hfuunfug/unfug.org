@@ -2,7 +2,11 @@
 title: Home
 ---
 
-<% (only_blogs(@items) + past_and_next_talks(@items)).each do |item| %>
+<%
+    (only_blogs(@items) + past_and_next_talks(@items)).sort_by do |item|
+        item.attributes[(is_talk?(item) ? :date : :created_at)]
+    end.each do |item|
+%>
     <% if is_talk? item %>
         <div class="frontpage_item frontpage_talk">
     <% else %>
