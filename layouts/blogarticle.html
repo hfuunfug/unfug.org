@@ -1,3 +1,12 @@
 <div id="blogarticle">
+    <ul>
+        <li>Titel: <%= @item.attributes[:title] %></li>
+        <li>Autor: <%= @item.attributes[:author] %></li>
+        <% if @item.attributes[:tags] and not @item.attributes[:tags].empty? %>
+            <li>
+                Tag(s): <%= tags_for(@item, separator: ", ", base_url: "/tags/") %>
+            </li>
+        <% end %>
+    </ul>
     <%= yield %>
 </div>
