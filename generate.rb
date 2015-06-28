@@ -352,3 +352,18 @@ TALKS = [
   Talk.new("15.01.2014", "Waysome Projektvorstellung", [ "Matthias Beyer", "Julian Ganz"]),
   Talk.new("22.01.2014", "Pimp my x86", []),
 ]
+
+require 'date'
+
+TALKS.each do |talk|
+  date = (talk.date ? Date.parse(talk.date).strftime("%Y-%m-%d") : "unknown")
+  title = talk.title.gsub(" ", "-")
+  ca = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+  author = "Matthias Beyer"
+  slides = "false"
+
+  filename = "./content/talks/#{date}-#{title}"
+  puts "filename: '#{filename}"
+
+end
+
