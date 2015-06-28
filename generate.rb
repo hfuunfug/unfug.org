@@ -6,6 +6,41 @@ class Talk < Struct.new(:date, :title, :speaker)
 end
 
 TALKS = [
+
+  Talk.new(2006, "IPv6", [ "Felix Krohn" ]),
+  Talk.new(2006, "Python", [ "Dominik Jall" ]),
+  Talk.new(2006, "Cell Processor Computing", [ "Benjamin Krill" ]),
+  Talk.new(2006, "Free NX", [ "Florian Schermer" ]),
+  Talk.new(2006, "Web Security", [ "Jan Schmidle" ]),
+  Talk.new(2006, "Buffer Overflows", [ "Florian Westphal" ]),
+  Talk.new(2006, "VIM", [ "Stefan Krist" ]),
+  Talk.new(2006, "PHP 5", [ "Alexander Lais" ]),
+  Talk.new(2006, "Effektive C Programmierung", [ "Hagen Paul Pfeifer" ]),
+  Talk.new(2006, "Key Signing Party", [ "Benjamin Bjoern Bratkus" ]),
+  Talk.new(2006, "Kurzvortraege/Pimp my Linux Box 2", [ "UnFUG Aktivisten" ]),
+
+
+  Talk.new(2005, "Abenteuer Vielzeiler / Literarisches Code Duo", [ "Hagen Paul Pfeifer", "Florian Westphal" ]),
+  Talk.new(2005, "SPAM Erkennungsstrategien (Erkennung und Analyse)", [ "Jens Baitinger" ]),
+  Talk.new(2005, "OpenSSL Programmierung", [ "Florian Westphal" ]),
+  Talk.new(2005, "LaTeX", [ "Alexander Naegele" ]),
+  Talk.new(2005, "Das semantische Web", [ "Tobias Walter" ]),
+  Talk.new(2005, "OpenWrt", [ "Marc McGuiness" ]),
+  Talk.new(2005, "Grid Computing", [ "Christoph Reich" ]),
+  Talk.new(2005, "Verschwoerungstheorien", [ "Martina Mattes", "Anja Troendlin-Ehrler" ]),
+  Talk.new(2005, "Pimp my x86 - Pimp my Linux Box", [ "UnFUG Aktivisten" ]),
+  Talk.new(2005, "SSH und screen", [ "Christian Koerner" ]),
+  Talk.new(2005, "Perl 6", [ "Hagen Paul Pfeifer" ]),
+
+
+  Talk.new(2004, "Verteilte Administration mit STAF", [ "Tobias Walter" ]),
+  Talk.new(2004, "IT-Grundschutz Audits (BSI)", [ "Marc Mc Guinness" ]),
+  Talk.new(2004, "Bluetooth und seine schwarzen Zaehne", [ "Hagen Paul Pfeifer" ]),
+  Talk.new(2004, "Die Kunst der Datenverschleierung", [ "Marc Mc Guinness" ]),
+  Talk.new(2004, "Key Signing Party", [ "Benjamin Bjoern Bratkus" ]),
+  Talk.new(2004, "Stealth Firewalling", [ "Stefan Wenigmann" ]),
+  Talk.new(2004, "Kernel- und UserSpace Debugging Techniken", [ "Hagen Paul Pfeifer" ]),
+
   Talk.new("30.03.2006", "Organisationstreffen",                          []),
   Talk.new("06.04.2006", "Filmabend",                                     []),
   Talk.new("13.04.2006", "PGP Keysigning & CAcert Assurance Party",       [ "Tobias Walter" ]),
