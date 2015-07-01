@@ -1,16 +1,24 @@
 ---
-title: Talks
+title: "Historie + Upcoming"
 kind: :page
 ---
 
-<%
-    past_and_next_talks(@items).sort_by do |item|
-        item.attributes[:date]
-    end.each do |item|
-        title = item.attributes[:date].to_s + " - " + item.attributes[:title]
-%>
-    <div>
-        <%= link_to title, item.identifier %>
+<p>Upcoming:</p>
+<% upcoming_talks(@items).each do |item| %>
+    <div class="link">
+        <%
+         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
+        %>
+        <%= link_to linktit, item.identifier %>
     </div>
 <% end %>
 
+<p>History:</p>
+<% past_talks(@items).each do |item| %>
+    <div class="link">
+        <%
+         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
+        %>
+        <%= link_to linktit, item.identifier %>
+    </div>
+<% end %>
