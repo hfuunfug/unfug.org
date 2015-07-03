@@ -356,14 +356,39 @@ TALKS = [
 require 'date'
 
 TALKS.each do |talk|
-  date = (talk.date ? Date.parse(talk.date).strftime("%Y-%m-%d") : "unknown")
+  puts talk
+  date = talk.date
+  if date.is_a? Fixnum
+    date = "#{date}-01-01 00:00:00"
+  end
+  date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "0000-00-00")
   title = talk.title.gsub(" ", "-")
   ca = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   author = "Matthias Beyer"
   slides = "false"
 
-  filename = "./content/talks/#{date}-#{title}"
-  puts "filename: '#{filename}"
+  filename = "./content/talks/#{date}-#{title.gsub("/", "_").gsub("(", "_").gsub(")", "_")}.md"
+  File.open(filename, "w") do |f|
+    f.puts "---"
+    f.puts "title: #{talk.title.gsub(":", " ")}"
+    f.puts "kind: :talk"
+    f.puts "date: #{ca}"
+    f.puts "created_at: #{Date.today}"
+    f.puts "speakers:"
+    if talk.speaker.empty?
+      f.puts "    - unknown"
+    else
+      talk.speaker.each do |s|
+        f.puts "    - #{s}"
+      end
+    end
+    f.puts "author: #{author}"
+    f.puts "slides: #{slides}"
+    f.puts "tags:"
+    f.puts "---"
+    f.puts ""
+    f.puts "No description."
+  end
 
 end
 
