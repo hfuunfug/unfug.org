@@ -361,7 +361,7 @@ TALKS.each do |talk|
   if date.is_a? Fixnum
     date = "#{date}-01-01 00:00:00"
   end
-  date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "1970-01-01 00:00:01")
+  date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "1970-01-01")
   title = talk.title.gsub(" ", "-")
   ca = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   author = "Matthias Beyer"
