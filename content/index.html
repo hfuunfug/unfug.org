@@ -4,7 +4,7 @@ title: Home
 
 <%
     (only_blogs(@items) + past_talks(@items)).sort_by do |item|
-        item.attributes[(is_talk?(item) ? :date : :created_at)]
+        item.attributes[(is_talk?(item) ? :date : :created_at)].to_datetime
     end.each do |item|
 %>
     <% if is_talk? item %>
