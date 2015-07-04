@@ -5,7 +5,7 @@ title: Home
 <%
     (only_blogs(@items) + past_talks(@items)).sort_by do |item|
         item.attributes[(is_talk?(item) ? :date : :created_at)].to_datetime
-    end.each do |item|
+    end.last(15).reverse.each do |item|
 %>
     <% if is_talk? item %>
         <div class="frontpage_item frontpage_talk">
