@@ -362,12 +362,12 @@ TALKS.each do |talk|
     date = "#{date}-01-01 00:00:00"
   end
   date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "1970-01-01")
-  title = talk.title.gsub(" ", "-")
+  title = talk.title
   ca = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   author = "Matthias Beyer"
   slides = "false"
 
-  filename = "./content/talks/#{date}-#{title.gsub("/", "_").gsub("(", "_").gsub(")", "_").gsub(".","_")}.md"
+  filename = "./content/talks/#{date}-#{title.gsub("/", "_").gsub("(", "").gsub(")", "").gsub(".","_")}.md"
   File.open(filename, "w") do |f|
     f.puts "---"
     f.puts "title: #{talk.title.gsub(":", " ")}"
