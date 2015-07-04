@@ -367,7 +367,7 @@ TALKS.each do |talk|
   author = "Matthias Beyer"
   slides = "false"
 
-  filename = "./content/talks/#{date}-#{title.gsub("/", "_").gsub("(", "_").gsub(")", "_")}.md"
+  filename = "./content/talks/#{date}-#{title.gsub("/", "_").gsub("(", "_").gsub(")", "_").gsub(".","_")}.md"
   File.open(filename, "w") do |f|
     f.puts "---"
     f.puts "title: #{talk.title.gsub(":", " ")}"
