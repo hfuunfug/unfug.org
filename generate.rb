@@ -361,7 +361,7 @@ TALKS.each do |talk|
   if date.is_a? Fixnum
     date = "#{date}-01-01 00:00:00"
   end
-  date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "0000-00-00")
+  date = (talk.date ? Date.parse(date).strftime("%Y-%m-%d") : "1970-01-01 00:00:01")
   title = talk.title.gsub(" ", "-")
   ca = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   author = "Matthias Beyer"
@@ -372,7 +372,7 @@ TALKS.each do |talk|
     f.puts "---"
     f.puts "title: #{talk.title.gsub(":", " ")}"
     f.puts "kind: :talk"
-    f.puts "date: #{ca}"
+    f.puts "date: #{date}"
     f.puts "created_at: #{Date.today}"
     f.puts "speakers:"
     if talk.speaker.empty?
