@@ -98,6 +98,11 @@ compile '/assets/stylesheets/*' do
   filter :sass, Compass.sass_engine_options.merge(syntax: item[:extension].to_sym)
 end
 
+compile '/assets/javascripts/*' do
+  filter :erb
+  filter :uglify_js if @config[:javascripts][:passthrough].include? File.basename(item.identifier)
+end
+
 compile '*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
@@ -121,7 +126,8 @@ route 'assets/images/*' do
 end
 
 route '/assets/javascripts/*' do
-  #ignore javascripts for now
+  filename = File.basename(item.identifier)
+  '/assets/' + filename + '.js' if @config[:javascripts][:passthrough].include?(filename)
 end
 
 route '/assets/stylesheets/*' do
