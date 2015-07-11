@@ -67,11 +67,19 @@ data_sources:
     # be the extension. For example,  a file named “content/about.html.erb”
     # will have the identifier “/about/” when turned off, but when turned on
     # it will become “/about.html/” instead.
-    allow_periods_in_identifiers: false
+    allow_periods_in_identifiers: true
 
     # The encoding to use for input files. If your input files are not in
     # UTF-8 (which they should be!), change this.
     encoding: utf-8
+
+javascripts:
+  compile:
+    - jquery
+    - jquery.foundation.topbar
+  passthrough:
+    - modernizr.foundation
+    - app
 
 # Configuration for the “check” command, which run unit tests on the site.
 checks:
