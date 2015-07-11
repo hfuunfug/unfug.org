@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title><%= @item[:title] %></title>
-        <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+        <link rel="stylesheet" href="/assets/app.css">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom/index.html">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
@@ -11,26 +11,38 @@
         <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
     </head>
     <body>
-        <div id="sidebar">
-            <ul>
-                <li><%= link_to "Home", '/' %></li>
-                <li><%= link_to "About", '/about' %></li>
-                <li><%= link_to "Talks", '/talks' %></li>
-                <li><%= link_to "Blog", '/blog/' %></li>
-                <li><%= link_to "Members", '/members/' %></li>
-                <li><%= link_to "Tags", '/tags/' %></li>
-                <li><%= link_to "Atom", '/atom/' %></li>
-                <li><%= link_to "XML Sitemap", '/sitemap/' %></li>
-                <li><a href='mailto:orga[at]unfug(dot)org'>Mail us</a></li>
-                <li><a href='irc://irc.ghb.fh-furtwangen.de:6667/#unfug'>IRC</a></li>
-                <li><a href='http://unfuck.eu'>UnFUCK</a></li>
-            </ul>
-        </div>
-        <div id="main">
-            <%= yield %>
-        </div>
-        <div id="topbar">
-            Unfug.org
+        <div class="row">
+            <div class="large-4 columns">
+                <div class="column">
+                    <div class="small-3 rows">
+                        <div id="topbar">
+                            Unfug.org
+                        </div>
+                    </div>
+                    <div class="small-9 rows">
+                        <div id="sidebar">
+                            <ul>
+                                <li><%= link_to "Home", '/' %></li>
+                                <li><%= link_to "About", '/about' %></li>
+                                <li><%= link_to "Talks", '/talks' %></li>
+                                <li><%= link_to "Blog", '/blog/' %></li>
+                                <li><%= link_to "Members", '/members/' %></li>
+                                <li><%= link_to "Tags", '/tags/' %></li>
+                                <li><%= link_to "Atom", '/atom/' %></li>
+                                <li><%= link_to "XML Sitemap", '/sitemap/' %></li>
+                                <li><a href='mailto:orga[at]unfug(dot)org'>Mail us</a></li>
+                                <li><a href='irc://irc.ghb.fh-furtwangen.de:6667/#unfug'>IRC</a></li>
+                                <li><a href='http://unfuck.eu'>UnFUCK</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="large-8 columns">
+                <div id="main">
+                    <%= yield %>
+                </div>
+            </div>
         </div>
     </body>
 </html>
