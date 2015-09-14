@@ -3,8 +3,8 @@ require 'date'
 
 def generate_event item, cfg
   event = Icalendar::Event.new
-  event.dtstart = item[:date].to_datetime + (cfg[:unfug_starttime] / 24.0)
-  event.dtend   = item[:date].to_datetime + (cfg[:unfug_endtime]   / 24.0)
+  event.dtstart = item[:date].to_datetime + (cfg[:page][:unfug][:start] / 24.0)
+  event.dtend   = item[:date].to_datetime + (cfg[:page][:unfug][:end]   / 24.0)
   event.summary = "Unfug"
   event.description = item[:speakers].join(", ") + " - " + item[:title]
   event
@@ -26,8 +26,11 @@ def generate_ical_items cfg
 end
 
 def generate_ical_items_latest cfg
+  latest = cfg[:page][:ical][:latest]
+  return if latest.nil? or latest == false
+
   ical = Icalendar::Calendar.new
-  only_talks(@items).take(15).each do |item|
+  only_talks(@items).take(latest).each do |item|
     ical.add_event generate_event(item, cfg)
   end
 
