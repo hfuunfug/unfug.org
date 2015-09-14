@@ -68,7 +68,7 @@ compile %r</profiles/\S*/*> do
   layout 'default'
 end
 
-compile '/ical/*' do
+compile '/ical*/*' do
   # Nothing
 end
 
@@ -105,7 +105,7 @@ compile '*' do
   end
 end
 
-route '/ical/*' do
+route '/ical*/*' do
   item.identifier.chop
 end
 
