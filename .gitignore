@@ -4,3 +4,4 @@ crash.log
 vendor
 .bundle
 Gemfile.lock
+.sass-cache
