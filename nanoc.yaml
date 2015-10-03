@@ -83,3 +83,21 @@ checks:
     # E.g.:
     #   exclude: ['^/server_status']
     exclude: []
+
+#
+# Unfug page configuration
+#
+page:
+    #
+    # Configuration for the Unfug as event
+    #
+    unfug:
+        # Starttime of the Unfug in integer
+        start:  19
+        # Endtime of the Unfug as integer
+        end:    20
+    # Ical configuration
+    ical:
+        # How many of the latest events should be put in the ical-latest
+        # file? Set to false or nil to switch off generating ical-latest
+        latest: 15
