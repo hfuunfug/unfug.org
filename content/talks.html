@@ -4,21 +4,69 @@ kind: :page
 ---
 
 <p>Upcoming:</p>
-<% upcoming_talks(@items).each do |item| %>
-    <div class="link">
-        <%
-         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
-        %>
-        <%= link_to linktit, item.identifier %>
-    </div>
-<% end %>
+<table>
+    <colgroup>
+        <col width="15%">
+        <col width="60%">
+        <col width="25%">
+    </colgroup>
+    <thead>
+    <tr>
+        <th align="left">Date</th>
+        <th align="left">Title</th>
+        <th align="left">Speakers</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% upcoming_talks(@items).each do |item| %>
+            <% a = item.attributes %>
+            <div class="link">
+                <tr>
+                    <td><%= a[:date].to_s %></td>
+                    <td>
+                      <% if a[:link_in_talk_list] == false %>
+                        <%= a[:title].to_s %>
+                      <% else %>
+                        <%= link_to a[:title].to_s, item.identifier %>
+                      <% end%>
+                    </td>
+                    <td><%= a[:speakers].join(", ") %></td>
+                </tr>
+            </div>
+        <% end %>
+    </tbody>
+</table>
 
 <p>History:</p>
-<% past_talks(@items).each do |item| %>
-    <div class="link">
-        <%
-         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
-        %>
-        <%= link_to linktit, item.identifier %>
-    </div>
-<% end %>
+<table>
+    <colgroup>
+        <col width="15%">
+        <col width="60%">
+        <col width="25%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th align="left">Date</th>
+            <th align="left">Title</th>
+            <th align="left">Speakers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% past_talks(@items).each do |item| %>
+            <% a = item.attributes %>
+            <div class="link">
+                <tr>
+                    <td><%= a[:date].to_s %></td>
+                    <td>
+                      <% if a[:link_in_talk_list] == false %>
+                        <%= a[:title].to_s %>
+                      <% else %>
+                        <%= link_to a[:title].to_s, item.identifier %>
+                      <% end%>
+                    </td>
+                    <td><%= a[:speakers].join(", ") %></td>
+                </tr>
+            </div>
+        <% end %>
+    </tbody>
+</table>
