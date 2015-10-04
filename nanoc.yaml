@@ -101,3 +101,7 @@ page:
         # How many of the latest events should be put in the ical-latest
         # file? Set to false or nil to switch off generating ical-latest
         latest: 15
+
+    semester:
+        summer_start_date: "01-03"
+        winter_start_date: "01-09"
