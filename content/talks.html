@@ -7,7 +7,8 @@ kind: :page
 <% upcoming_talks(@items).each do |item| %>
     <div class="link">
         <%
-         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
+         a = item.attributes
+         linktit = "#{a[:date]} - #{a[:title]} - #{a[:speakers].join(", ")}"
         %>
         <%= link_to linktit, item.identifier %>
     </div>
@@ -17,7 +18,8 @@ kind: :page
 <% past_talks(@items).each do |item| %>
     <div class="link">
         <%
-         linktit = item.attributes[:date].to_s + " - " + item.attributes[:title]
+         a = item.attributes
+         linktit = "#{a[:date]} - #{a[:title]} - #{a[:speakers].join(", ")}"
         %>
         <%= link_to linktit, item.identifier %>
     </div>
