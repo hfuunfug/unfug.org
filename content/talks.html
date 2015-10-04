@@ -23,7 +23,13 @@ kind: :page
             <div class="link">
                 <tr>
                     <td><%= a[:date].to_s %></td>
-                    <td><%= link_to a[:title].to_s, item.identifier %></td>
+                    <td>
+                      <% if a[:link_in_talk_list] == false %>
+                        <%= a[:title].to_s %>
+                      <% else %>
+                        <%= link_to a[:title].to_s, item.identifier %>
+                      <% end%>
+                    </td>
                     <td><%= a[:speakers].join(", ") %></td>
                 </tr>
             </div>
@@ -51,7 +57,13 @@ kind: :page
             <div class="link">
                 <tr>
                     <td><%= a[:date].to_s %></td>
-                    <td><%= link_to a[:title].to_s, item.identifier %></td>
+                    <td>
+                      <% if a[:link_in_talk_list] == false %>
+                        <%= a[:title].to_s %>
+                      <% else %>
+                        <%= link_to a[:title].to_s, item.identifier %>
+                      <% end%>
+                    </td>
                     <td><%= a[:speakers].join(", ") %></td>
                 </tr>
             </div>
