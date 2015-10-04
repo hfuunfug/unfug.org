@@ -1,16 +1,17 @@
 require 'date'
 
-def past_talks items
-  limit = DateTime.now
+def fetch_talks items, cmp
   items.select do |i|
-    i.attributes[:kind] == :talk and i.attributes[:date].to_datetime <= limit
-  end.sort_by { |i| i.attributes[:date].to_datetime }.reverse
+    a = i.attributes
+    a[:kind] == :talk and a[:date].to_datetime.send cmp, DateTime.now
+  end.sort_by { |i| i.attributes[:date].to_datetime }
+end
+
+def past_talks items
+  fetch_talks items, :<=
 end
 
 def upcoming_talks items
-  limit = DateTime.now
-  items.select do |i|
-    i.attributes[:kind] == :talk and i.attributes[:date].to_datetime > limit
-  end.sort_by { |i| i.attributes[:date].to_datetime }
+  fetch_talks items, :>
 end
 
