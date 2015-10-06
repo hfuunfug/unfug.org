@@ -17,7 +17,7 @@ base_url: "http://unfug.org"
 #
 # title of the page for blogging functionality: atom feed
 #
-title: "Unfug - Unix Friends and User Group Furtwangen"
+title: "UnFUG - Unix Friends and User Group Furtwangen"
 
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
@@ -85,7 +85,7 @@ checks:
     exclude: []
 
 #
-# Unfug page configuration
+# UnFUG page configuration
 #
 page:
     #

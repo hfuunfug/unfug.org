@@ -10,7 +10,7 @@ let
 in
 
 stdenv.mkDerivation rec {
-    name = "unfug.org";
+    name = "UnFUG.org";
     src = ./.;
     version = "0.0.0";
 

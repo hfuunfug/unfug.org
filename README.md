@@ -1,6 +1,6 @@
-# unfug.org
+# UnFUG.org
 
-This repository contains the unfug.org page sources.
+This repository contains the UnFUG.org page sources.
 
 ## Notes for what would be great on the website
 
