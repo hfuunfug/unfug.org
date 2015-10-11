@@ -32,8 +32,8 @@ tags:
 ---
 
 I entered the university in 2013, summer semester. I've been a member of the
-unfug from the very start of my first semester and I took the leadership of
-the unfug in my 4th semester. It was always a pleasure to me to hear talks
+UnFUG from the very start of my first semester and I took the leadership of
+the UnFUG in my 4th semester. It was always a pleasure to me to hear talks
 with the people at the weekly meetups and although I heard several topics
 for like the 3rd time, it never got bored.
 

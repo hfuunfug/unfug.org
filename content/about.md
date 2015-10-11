@@ -28,7 +28,7 @@ Alleinunterhalter auftritt - Diskussionen sind explizit erwünscht.
 Normalerweise gibt es einen lockeren 60 Minuten Vortrag mit Diskussion -
 Anschließend treffen sich Interessierte noch in einer nahe gelegenen Kneipe.
 
-Ausserdem fahren die Mitglieder des Unfugs gerne zusammen auf Konferenzen und
+Ausserdem fahren die Mitglieder des UnFUGs gerne zusammen auf Konferenzen und
 Linux-Wochenenden.
 
 Seit dem Sommersemester 2015 ist diese nahe gelegene Kneipe leider geschlossen,

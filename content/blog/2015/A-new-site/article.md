@@ -8,7 +8,7 @@ tags:
   - site
 ---
 
-This is the very first entry in the unfug.org blog.
+This is the very first entry in the UnFUG.org blog.
 
 We created this new site because we thought the old one was getting a bit
 dusty. Also, the old site was updated writing plain html, which was not only

@@ -1,5 +1,5 @@
 ---
-title: Unfug geekend
+title: UnFUG geekend
 kind: :talk
 date: 2009-11-21
 created_at: 2015-07-11
