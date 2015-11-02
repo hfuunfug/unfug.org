@@ -1,5 +1,5 @@
 ---
-title: Ruby extensions in Rust vs. in C
+title: Scalable Web Applications with NginX and Docker
 kind: :talk
 date: 2015-11-05
 created_at: 2015-10-03
