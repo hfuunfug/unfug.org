@@ -1,5 +1,5 @@
 ---
-title: Automatted Application Deploymend as a Service
+title: Ruby extensions in C vs. in Rust
 kind: :talk
 date: 2015-11-26
 created_at: 2015-10-03
