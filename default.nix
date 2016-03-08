@@ -5,7 +5,7 @@
 let
   env = with pkgs; [
     bundler
-    ruby_2_2_0
+    ruby_2_2
   ];
 in
 
