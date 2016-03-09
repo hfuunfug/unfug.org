@@ -3,7 +3,7 @@ title: Unfug Programming Saturday (UPS)
 kind: :blog
 date: 2016-03-08
 created_at: 2016-03-08
-author: Matthias Beyer
+author: Matthias Beyer, (edited by Marcel Müller)
 tags:
   - programming
   - event
@@ -12,14 +12,14 @@ tags:
 For this semester, the Unfug got the permission to host a weekly event, called
 the "Unfug Hackt" (unfug programming).
 
-The attendees of the Unfug will meet each Saturday (from 14:00, open end) to
-work on their private programming projects and to collaborate, socialize and to
-have fun together while working with and learning programming languages.
+The event will take place on Saturday from 14:00 and is open ended. The basic
+idea is for people to work on their programming projects and to collaborate,
+socialize and generally have fun together.
 
-We will not provide tutoring for people which are too stupid to use google.
-We are neither a programming-learning class nor a homework group.
-We want to work efficient and in a quiet and concentrating
-environment on private projects. Collaboration is wanted, but not required.
-Discussion and exchange of ideas and opinions is desired.
+However, we are not a tutoring group. While guidance can be offered it is not
+something to expect in general. In thoses cases Google is your friend :)
 
-Lets see how things work out!
+However what is to be expected is a fun environment filled with music,
+cheerfulness and laptops.
+
+See you there next time!
