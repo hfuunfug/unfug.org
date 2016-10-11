@@ -1,5 +1,5 @@
 ---
-title: Grundlagen Regeltechnik
+title: Grundlagen der Regelungstechnik
 kind: :talk
 date: 2016-10-27
 created_at: 2016-10-11
@@ -11,6 +11,7 @@ tags:
 link_in_talk_list: false
 ---
 
-No description.
+Jule stellt beispielhaft einige Grundlagen der Regelungstechnik vor. Diese
+lassen sich für 3D-Drucker oder andere Hardware-Basteleien nutzen.
 
 
