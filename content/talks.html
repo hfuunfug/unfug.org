@@ -24,7 +24,7 @@ kind: :page
                 <tr>
                     <td><%= a[:date].to_s %> 19:00</td>
                     <td>
-                      <% if a[:link_in_talk_list] == false %>
+                      <% if a[:link_in_talk_list] %>
                         <%= a[:title].to_s %>
                       <% else %>
                         <%= link_to a[:title].to_s, item.identifier %>
@@ -65,7 +65,7 @@ kind: :page
                     <tr>
                         <td><%= a[:date].to_s %> 19:00</td>
                         <td>
-                          <% if a[:link_in_talk_list] == false %>
+                          <% if a[:link_in_talk_list] %>
                             <%= a[:title].to_s %>
                           <% else %>
                             <%= link_to a[:title].to_s, item.identifier %>
