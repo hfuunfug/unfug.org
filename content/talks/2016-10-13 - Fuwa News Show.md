@@ -12,6 +12,7 @@ tags:
 link_in_talk_list: false
 ---
 
-No description.
+Angelehnt an ein in der Szene bekanntes Format werden ausgewählte Ereignisse
+aus den letzten Monaten beleuchtet.
 
 
