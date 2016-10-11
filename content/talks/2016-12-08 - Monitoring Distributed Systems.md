@@ -11,6 +11,6 @@ tags:
 link_in_talk_list: false
 ---
 
-No description.
-
+Matze redet über Monitoren von (verteilten) Systemen, einer Ausarbeitung welche
+im Rahmen seines Masterstudiums angefertigt wurde.
 
