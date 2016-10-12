@@ -9,6 +9,10 @@ speakers:
 author: Matthias Beyer
 slides: false
 tags:
+    - vim
+    - git
+    - bash
+    - latex
 link_in_talk_list: false
 ---
 
