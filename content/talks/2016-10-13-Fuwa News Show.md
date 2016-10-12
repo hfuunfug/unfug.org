@@ -9,6 +9,9 @@ speakers:
 author: Matthias Beyer
 slides: false
 tags:
+    - comedy
+    - news
+    - security
 link_in_talk_list: false
 ---
 
