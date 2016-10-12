@@ -8,6 +8,8 @@ speakers:
 author: Matthias Beyer
 slides: false
 tags:
+    - embedded
+    - hardware
 link_in_talk_list: false
 ---
 
