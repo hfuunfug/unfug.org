@@ -2,6 +2,45 @@
 title: Home
 ---
 
+<h1>Up next</h1>
+
+<%
+    item = (upcoming_talks(@items)).sort_by do |item|
+        item.attributes[:date].to_datetime
+    end.first
+%>
+    <div class="frontpage_item frontpage_talk">
+        <h2>
+            <%= link_to item.attributes[:title], item.identifier %>
+            <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
+                <%= item.attributes[:date] %>
+            </time>
+        </h2>
+
+
+        <% if item.attributes[:speakers] or item.attributes[:author] %>
+            <div class="frontpage_item_author">
+                <% if is_talk? item %>
+                    Speaker(s): <%= item.attributes[:speakers].join(", ") %>
+                <% else %>
+                    Author: <%= item.attributes[:author] %>
+                <% end %>
+            </div>
+        <% end %>
+
+        <% if item.attributes[:description] %>
+            <div class="frontpage_item_desc">
+                <%= item.attributes[:description] %>
+            </div>
+        <% end %>
+
+        <div class="frontpage_item_tag_box">
+            Tags: <%= tags_for(item, separator: ", ") %>
+        </div>
+    </div>
+
+<h1>History</h1>
+
 <%
     (only_blogs(@items) + past_talks(@items)).sort_by do |item|
         item.attributes[(is_talk?(item) ? :date : :created_at)].to_datetime
