@@ -29,5 +29,4 @@ aktuellen Stand der Entwicklung, speziell was sich hier unter
 Sicherheitsaspekten getan hat, und betrachtet, wie sich damit
 Container in eine verteilte Umgebung mit Sicherheitsanforderungen
 einbinden lassen.
-<Paste>
 
