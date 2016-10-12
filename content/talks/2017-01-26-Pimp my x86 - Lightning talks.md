@@ -1,7 +1,7 @@
 ---
 title: Pimp my x86 - Lightning Talks
 kind: :talk
-date: 2016-01-26
+date: 2017-01-26
 created_at: 2016-10-11
 speakers:
     - UnFUG-Aktivisten
