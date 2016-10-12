@@ -11,7 +11,7 @@ tags:
 link_in_talk_list: false
 ---
 
-No description.
+Leute, die Lust drauf' haben, halten Kurzvorträge über beliebige Themen.
 
 
 
