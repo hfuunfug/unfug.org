@@ -1,5 +1,5 @@
 ---
-title: Autonome System + BGP
+title: Autonome Systeme und BGP
 kind: :talk
 date: 2016-11-03
 created_at: 2016-10-11
