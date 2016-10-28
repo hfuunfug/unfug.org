@@ -1,7 +1,7 @@
 ---
 title: CANBUS & Audi MMI
 kind: :talk
-date: 2016-11-03
+date: 2016-12-01
 created_at: 2016-10-11
 speakers:
     - Johannes
