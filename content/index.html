@@ -4,12 +4,14 @@ title: Home
 
 <h1>Up next</h1>
 
-<%
-    item = (upcoming_talks(@items)).sort_by do |item|
-        item.attributes[:date].to_datetime
-    end.first
-%>
-    <div class="frontpage_item frontpage_talk">
+<div class="frontpage_item frontpage_talk">
+    <%
+        item = (upcoming_talks(@items)).sort_by do |item|
+            item.attributes[:date].to_datetime
+        end.first
+
+        unless item.nil?
+    %>
         <h2>
             <%= link_to item.attributes[:title], item.identifier %>
             <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
@@ -37,7 +39,11 @@ title: Home
         <div class="frontpage_item_tag_box">
             Tags: <%= tags_for(item, separator: ", ") %>
         </div>
-    </div>
+    <% else %>
+        <p>No Talks upcoming.</p>
+    <% end %>
+</div>
+
 
 <h1>History</h1>
 
@@ -52,7 +58,7 @@ title: Home
         <div class="frontpage_item frontpage_blog">
     <% end %>
         <h2>
-            <%= link_to item.attributes[:title], item.identifier %>
+            <%= link_to item.attributes[:title], item.identifier.to_s %>
             <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
                 <%= item.attributes[:date] %>
             </time>
