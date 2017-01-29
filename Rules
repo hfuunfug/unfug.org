@@ -31,8 +31,8 @@ compile %r</talks/\d{4}-\d{2}-\d{2}\-\S*/*> do
   raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown: #{item[:filename]}" if item[:extension] != 'md'
   filter :kramdown
-  layout 'talk'
-  layout 'default'
+  layout '/talk.*'
+  layout '/default.*'
 end
 
 #
@@ -51,8 +51,8 @@ compile %r</blog/\d{4}/\S*/article/*> do
   raise "Item shouldn't be binary" if item.binary?
   raise "Item is not Markdown" if item[:extension] != 'md'
   filter :kramdown
-  layout 'blogarticle'
-  layout 'default'
+  layout '/blogarticle.*'
+  layout '/default.*'
 end
 
 #
@@ -65,8 +65,8 @@ compile %r</profiles/\S*/*> do
   raise "Item is not Markdown" if item[:extension] != 'md'
   raise "Item shouldn't be binary" if item.binary?
   filter :kramdown
-  layout 'member'
-  layout 'default'
+  layout '/member.*'
+  layout '/default.*'
 end
 
 compile '/ical*/*' do
@@ -75,13 +75,13 @@ end
 
 compile '/tags/' do
   filter :erb
-  layout 'default'
+  layout '/default.*'
 end
 
-compile '/tags/*' do
+compile '/tags/**/*' do
   filter :erb
-  layout 'tagpage'
-  layout 'default'
+  layout '/tagpage.*'
+  layout '/default.*'
 end
 
 compile '/sitemap/' do
@@ -92,17 +92,21 @@ compile '/atom/*' do
   filter :erb
 end
 
-compile '*' do
+compile '/static/*' do
+  # Nothing
+end
+
+compile '/*' do
   if item[:extension] == 'css'
     # don’t filter stylesheets or icalendar files
   elsif item[:extension] == 'md'
     filter :kramdown
-    layout 'default'
+    layout '/default.*'
   elsif item.binary?
     # don’t filter binary items
   else
     filter :erb
-    layout 'default'
+    layout '/default.*'
   end
 end
 
@@ -110,7 +114,7 @@ route '/ical*/*' do
   item.identifier.chop
 end
 
-route '*' do
+route '/*' do
   if item[:extension] == 'css'
     # Write item with identifier /foo/ to /foo.css
     item.identifier.chop + '.css'
@@ -124,4 +128,4 @@ route '*' do
 end
 
 layout '/ical/', nil
-layout '*', :erb
+layout '/*', :erb
