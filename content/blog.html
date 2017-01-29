@@ -3,13 +3,11 @@ title: Blog
 kind: :page
 ---
 
-<% only_blogs(@items).each do |item|
-        item.attributes[:created_at]
-    end.each do |item|
-        title = item.attributes[:created_at].to_s + " - " + item.attributes[:title]
+<% only_blogs(@items).each { |i| i.attributes[:created_at] }.each do |i|
+    title = i.attributes[:created_at].to_s + " - " + i.attributes[:title].to_s
 %>
     <div>
-        <%= link_to title, item.identifier %>
+        <%= link_to title, i.identifier.to_s %>
     </div>
 <% end %>
 

@@ -19,6 +19,11 @@ base_url: "http://unfug.org"
 #
 title: "UnFUG - Unix Friends and User Group Furtwangen"
 
+# Update to nanoc 4
+string_pattern_type: glob
+
+identifier_type: full
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.html”, but depending on the web server, this may be something else,
