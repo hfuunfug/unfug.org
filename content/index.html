@@ -13,7 +13,7 @@ title: Home
         unless item.nil?
     %>
         <h2>
-            <%= link_to item.attributes[:title], item.identifier %>
+            <%= link_to item.attributes[:title], item %>
             <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
                 <%= item.attributes[:date] %>
             </time>
@@ -58,7 +58,7 @@ title: Home
         <div class="frontpage_item frontpage_blog">
     <% end %>
         <h2>
-            <%= link_to item.attributes[:title], item.identifier.to_s %>
+            <%= link_to item.attributes[:title], item %>
             <time class="frontpage_item_date" datetime="<%= item.attributes[:date] %>">
                 <%= item.attributes[:date] %>
             </time>

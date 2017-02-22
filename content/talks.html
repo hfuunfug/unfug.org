@@ -27,7 +27,7 @@ kind: :page
                       <% if a[:link_in_talk_list] %>
                         <%= a[:title].to_s %>
                       <% else %>
-                        <%= link_to a[:title].to_s, item.identifier.to_s %>
+                        <%= link_to a[:title].to_s, item %>
                       <% end%>
                     </td>
                     <td><%= a[:speakers].join(", ") %></td>
@@ -68,7 +68,7 @@ kind: :page
                           <% if a[:link_in_talk_list] %>
                             <%= a[:title].to_s %>
                           <% else %>
-                            <%= link_to a[:title].to_s, item.identifier.to_s %>
+                            <%= link_to a[:title].to_s, item %>
                           <% end%>
                         </td>
                         <td><%= a[:speakers].join(", ") %></td>
