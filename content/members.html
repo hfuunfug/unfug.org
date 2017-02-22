@@ -5,7 +5,7 @@ kind: :page
 
 <% only_members(@items).each do |item| %>
     <div>
-        <%= link_to item.attributes[:name], item.identifier.to_s %>
+        <%= link_to item.attributes[:name], item %>
     </div>
 <% end %>
 
