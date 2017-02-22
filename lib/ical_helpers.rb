@@ -30,7 +30,7 @@ def generate_ical_items_latest cfg
   return if latest.nil? or latest == false
 
   ical = Icalendar::Calendar.new
-  only_talks(@items).take(latest).each do |item|
+  only_talks(@items).sort_by {|i| i[:date] }.reverse.take(latest).each do |item|
     ical.add_event generate_event(item, cfg)
   end
 
