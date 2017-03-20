@@ -12,4 +12,6 @@ tags:
 link_in_talk_list: false
 ---
 
+In the 19th century, Charles Babbage conveived the analytical engine, a mechanical
+computer. We'll have a closer look at it.
 

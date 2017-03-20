@@ -13,6 +13,6 @@ tags:
 link_in_talk_list: false
 ---
 
-Die Fuwa News Show läd zum semesterlichen Update in Sachen Internet,
-Informatik und Dinge.
+Die Fuwa News Show läd zum semesterlichen Update in Sachen Informatik,
+Internet und Dinge.
 
