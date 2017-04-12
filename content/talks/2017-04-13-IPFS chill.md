@@ -24,3 +24,5 @@ awesome.
 We may continue watching some talks about IPFS on youtube and then have a nice
 evening with eachother.
 
+We meet at C2.16 for this event.
+
