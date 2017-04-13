@@ -1,6 +1,4 @@
-{ stdenv
-, pkgs ? (import <nixpkgs> {})
-}:
+{ pkgs ? (import <nixpkgs> {}) }:
 
 let
   env = with pkgs; [
@@ -9,7 +7,7 @@ let
   ];
 in
 
-stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation rec {
     name = "UnFUG.org";
     src = ./.;
     version = "0.0.0";
