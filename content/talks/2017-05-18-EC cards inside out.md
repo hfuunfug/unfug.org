@@ -1,7 +1,7 @@
 ---
 title: EC Cards inside out
 kind: :talk
-date: 2017-04-27
+date: 2017-05-18
 created_at: 2017-03-20
 speakers:
     - Kai

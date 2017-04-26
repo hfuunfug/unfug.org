@@ -1,7 +1,7 @@
 ---
 title: Containers do not contain!? - Status Quo Container Security
 kind: :talk
-date: 2017-05-18
+date: 2017-04-27
 created_at: 2017-03-20
 speakers:
     - Holger Gantikow
