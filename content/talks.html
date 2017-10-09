@@ -30,7 +30,7 @@ kind: :page
                         <%= link_to a[:title].to_s, item %>
                       <% end%>
                     </td>
-                    <td><%= a[:speakers].join(", ") %></td>
+                    <td><%= (a[:speakers] or []).join(", ") %></td>
                 </tr>
             </div>
         <% end %>
@@ -71,7 +71,7 @@ kind: :page
                             <%= link_to a[:title].to_s, item %>
                           <% end%>
                         </td>
-                        <td><%= a[:speakers].join(", ") %></td>
+                        <td><%= (a[:speakers] or []).join(", ") %></td>
                     </tr>
                 </div>
             <% end %>
