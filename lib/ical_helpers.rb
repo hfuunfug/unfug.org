@@ -6,7 +6,11 @@ def generate_event item, cfg
   event.dtstart = item[:date].to_datetime + (cfg[:page][:unfug][:start] / 24.0)
   event.dtend   = item[:date].to_datetime + (cfg[:page][:unfug][:end]   / 24.0)
   event.summary = "UnFUG"
-  event.description = item[:speakers].join(", ") + " - " + item[:title]
+  if item[:speakers]
+    event.description = item[:speakers].join(", ") + " - " + item[:title]
+  else
+    event.description = item[:title]
+  end
   event
 end
 
