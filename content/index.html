@@ -23,7 +23,7 @@ title: Home
         <% if item.attributes[:speakers] or item.attributes[:author] %>
             <div class="frontpage_item_author">
                 <% if is_talk? item %>
-                    Speaker(s): <%= item.attributes[:speakers].join(", ") %>
+                    Speaker(s): <%= (item.attributes[:speakers] or []).join(", ") %>
                 <% else %>
                     Author: <%= item.attributes[:author] %>
                 <% end %>
@@ -68,7 +68,7 @@ title: Home
         <% if item.attributes[:speakers] or item.attributes[:author] %>
             <div class="frontpage_item_author">
                 <% if is_talk? item %>
-                    Speaker(s): <%= item.attributes[:speakers].join(", ") %>
+                    Speaker(s): <%= (item.attributes[:speakers] or []).join(", ") %>
                 <% else %>
                     Author: <%= item.attributes[:author] %>
                 <% end %>
