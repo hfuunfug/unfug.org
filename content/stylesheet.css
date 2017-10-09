@@ -22,6 +22,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+table {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }
