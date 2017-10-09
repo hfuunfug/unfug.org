@@ -1,7 +1,7 @@
 ---
 title: Intelligent Transport Systems / ESP32
 kind: :talk
-date: 2017-10-12
+date: 2018-01-18
 created_at: 2017-10-06
 speakers:
     - Asui
