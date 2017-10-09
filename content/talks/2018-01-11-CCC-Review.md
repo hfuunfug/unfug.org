@@ -1,7 +1,7 @@
 ---
 title: 34C3-Review
 kind: :talk
-date: 2017-01-11
+date: 2018-01-11
 created_at: 2017-10-06
 speakers:
     - Asui
