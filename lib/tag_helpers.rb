@@ -12,7 +12,7 @@ end
 #
 def generate_tag_pages
   all_tags(items).each do |tag|
-    items.create("", { :tag => tag }, "/tags/#{tag}/")
+    items.create("", { :tag => tag }, "/tags/#{tag}")
   end
 end
 

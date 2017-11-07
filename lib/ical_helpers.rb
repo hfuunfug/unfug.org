@@ -26,7 +26,7 @@ def generate_ical_items cfg
     ical.add_event generate_event(item, cfg)
   end
 
-  @items.create(ical.to_ical, {:kind => :ical}, "/ical/")
+  @items.create(ical.to_ical, {:kind => :ical}, "/ical")
 end
 
 def generate_ical_items_latest cfg
@@ -38,6 +38,6 @@ def generate_ical_items_latest cfg
     ical.add_event generate_event(item, cfg)
   end
 
-  @items.create(ical.to_ical, {:kind => :ical}, "/ical-latest/")
+  @items.create(ical.to_ical, {:kind => :ical}, "/ical-latest")
 end
 
