@@ -84,11 +84,11 @@ compile '/tags/**/*' do
   layout '/default.*'
 end
 
-compile '/sitemap/' do
+compile '/sitemap.html' do
   filter :erb
 end
 
-compile '/atom/*' do
+compile '/atom.html' do
   filter :erb
 end
 
