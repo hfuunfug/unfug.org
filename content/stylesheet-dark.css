@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	color: #eee;
 }
 
 body, html {
@@ -17,7 +18,7 @@ body, html {
 }
 
 body {
-    background: #fff;
+    background: #111111;
     padding-top: 30px;
     font-family: "Open Sans", sans-serif;
 }
@@ -32,11 +33,11 @@ a {
 
 a:link,
 a:visited {
-    color: #f30;
+    color: #00dd00;
 }
 
 a:hover {
-    color: #f90;
+    color: #22ff22;
 }
 
 #main {
@@ -137,11 +138,13 @@ a:hover {
 }
 .frontpage_blog:after {
     content: "Blog";
-    background: #FFB347;
+    background-color: #E03311;
+	color: #efe;
 }
 .frontpage_talk:after {
     content: "Talk";
-    background: #B4CFEC;
+    background-color: #eeff33;
+	color: #448844;
 }
 
 @media only screen and (max-width : 860px) {
