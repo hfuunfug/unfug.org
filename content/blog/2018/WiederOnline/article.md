@@ -1,15 +1,10 @@
 ---
 title: Wieder Online
-kind: :talk
+kind: :blog
 date: 2018-10-08
 created_at: 2018-10-08
-speakers:
-    - Niemand
-
 author: Maxim Balsacq
-slides: false
 tags:
-link_in_talk_list: false
 ---
 
 Wir haben endlich wieder Zugriff auf den Server! Letztes Semester wurden aus Versehen
